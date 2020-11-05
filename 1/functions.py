@@ -157,3 +157,107 @@ print('As you can see above that mod_function had the reference to the some_list
 print()
 print('-----------------------')
 print()
+
+print(note:='lets have look at docstring and annotation')
+print(note:='python has a help function to shows us details and providea glimpse into the functionality of thing under consideration')
+print(note:='help for print shows below output')
+help(print)
+print()
+print(note:='pretty cool ...eh ?')
+
+def to_upper(input):
+	if type(input) == str:
+		print(input.upper())
+	else:
+		print('please pass a string as input')
+
+print(note:='what would happen if we run help on above function?')
+print()
+help(to_upper)
+print()
+print(note:='As you can see we dont have much help information')
+print()
+print(note:='we can add docstring to our own functions so that when help is called on it, we print the requested information')
+
+def to_upper_with_help(input):
+	# this is a docstring that shall be consumed by help function
+	'''
+	prints the upper case of the string passed
+	if no string passed we shall update the user that we expect a string input'
+	Inputs:
+		string
+	Returns:
+		upper case of string
+	'''
+	if type(input) == str:
+		print(input.upper())
+	else:
+		print('please pass a string as input')
+		
+print(note:='Now when we shall do help on the above function we shall see the information')
+print()
+help(to_upper_with_help)
+print()
+print(note:='How does the help picks this information???')
+print(note:='lets do dif on the function and see if we can get some hint')
+print()
+print(dir(to_upper_with_help))
+print()
+print(note:='did you notice the __doc__ attribute in above result?, if we print it we shall see the same content that help throws')
+print(to_upper_with_help.__doc__)
+print()
+print(note:='did you notice the __annotations__ attribute in dir result? currently its empty')
+print(to_upper_with_help.__annotations__)
+print()
+print(note:='lets create another function that supports annotation')
+def to_upper_with_annotation(input:'annotation for input, we expect a string as input')->'annotation for return value, we dont return anything from this function':
+	# this is a docstring that shall be consumed by help function
+	'''
+	prints the upper case of the string passed
+	if no string passed we shall update the user that we expect a string input'
+	Inputs:
+		string
+	Returns:
+		upper case of string
+	'''
+	if type(input) == str:
+		print(input.upper())
+	else:
+		print('please pass a string as input')
+		
+print()
+print(note:='and now we will see the information in annotation attribute')
+print(to_upper_with_annotation.__annotations__)
+print(note:='now if we do help on the above function we shall see both the docstring and annotation')
+print()
+help(to_upper_with_annotation)
+print()
+print('-----------------------')
+print()
+
+print(note:='lets have another look at the lambdas we touched earlier')
+
+f =  lambda x,y : x**y 
+print(note:='lambda is a nameless function, the variable points to the lambda function created')
+print(note:='we can call this function by using the variable passing required parameters')
+print(f(2,3))
+assert f(2,2) == 4
+print(note:='lambdas allows default parameters')
+
+f = lambda x, y=2 : x**y 
+print(f(2))
+assert f(2) == 4 
+
+print(note:='as we mentioned before function are first class object, we can pass them as variable')
+print(note:='check the below function, here we pass two variable, first one is used as an argument to the lambda function passed to it as second parameter')
+
+def use_lambda(x,lm):
+	print(lm(x))
+
+use_lambda(2,f)
+
+
+
+print()
+print('-----------------------')
+print()

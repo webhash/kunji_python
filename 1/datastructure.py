@@ -74,7 +74,6 @@ print(some_dict1)
 print(hex(id(some_dict1)))
 assert some_dict_add1 == hex(id(some_dict1))
 
-print(note:='standard dict is not ordered , i.e. we can not be sure that when we print the keys they are printed in the same order as we added the keys')
 print(note:='collections have ordered dict which ensures the ordering')
 print(note:='what all function does dict supports?')
 for item in dir(some_dict1):

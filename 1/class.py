@@ -60,6 +60,20 @@ print()
 print('-----------------------')
 print()
 
+print(note:='As functions are also object we can add user defined attributed to any function')
+
+def some_func():
+	print('i don`t do anything')
+
+setattr(some_func, 'version', '2.0')
+print(getattr(some_func, 'version'))
+print()
+print(note:='did that bow your mind ??? python is awesome')
+
+print()
+print('-----------------------')
+print()
+
 print(note:= 'did you notice the __dict__ attribute in the dir of previous Empty class?')
 print(NonEmpty.__dict__)
 print(note:= 'As you can see the version value is stored in this dict')
@@ -227,6 +241,134 @@ clsstr2.print_class_info()
 print(note:='and now the eq operator will work')
 print(clsstr1 == clsstr2)
 print(note:='similarly we can add support for __lt__  and  __gt__ to have support of less than and greater than operator')
+print()
+print('-----------------------')
+print()
+print(note:='lets have a look at the classmethod, staticmethod and instancemethod')
+class NewClass:
+	def method(self):
+		# this is docstring which shall be consumed by the help function
+		'''
+		this method is bound to the object
+		as you can see we pass self here, which refers to the object that calls this function
+		Not only can they modify object state, instance methods can also access the class itself
+		through the self.__class__ attribute.
+		This means instance methods can also modify class state
+		'''
+		return 'instance method called', self
+	# this @classmethod is a decorator, as name suggests it decorates or add behaviour to particular function
+	@classmethod
+	def classmethod(cls):
+		'''
+		class methods take a cls parameter that points to the class and not the object instance
+		when the method is called. Because the class method only has access to this cls argument,
+		it cant modify object instance state.
+		'''
+		return 'class method called', cls
+	# this @staticmethod tells the complier that this function is static type
+	@staticmethod
+	def staticmethod():
+		'''
+		This type of method takes neither a self nor a cls parameter.
+		Therefore a static method can neither modify object state nor class state.
+		Static methods are restricted in what data they can access
+		'''
+		return 'static method called'
+
+print(note:='lets call the help function on the NewClass created')
+help(NewClass)
+print()
+
+print(note:='lets create an object of NewClass type')
+ncObj = NewClass()
+print(note:='lets print the address of the above object')
+print(hex(id(ncObj)))
+print(note:='now lets call the method, which is bound to the object , we will see the address of the ncObj')
+print(ncObj.method())
+print(note:='we shall see the same address of self as that of the ncObj address')
+print(note:='we can see the same result if we call the method directly from NewClass and pass the ncObj')
+print(NewClass.method(ncObj))
+print()
+print(note:='now lets call the classmethod, which is bound to the class, we will see the address of the class')
+print(note:='again we shall repeat ... evrything is object in python, even the class')
+print(NewClass.classmethod())
+print(note:='we can also use the object to call the class method, and as you would see we see the address of class')
+print(ncObj.classmethod())
+print(note:='now lets call the staticmethod, they are like regular function bound to a class, they dont have access to object or class instace')
+print(NewClass.staticmethod())
+print(note:='we can also use the object to call the staticmethod')
+print(ncObj.staticmethod())
+
+print()
+print('-----------------------')
+print()
+
+print(note:='let us create a more real world scenario to understand the static, class and normal method')
+print(note:='but before that one should remeber that python allows only one __init__ constructor')
+
+class Vehicle:
+	def __init__(self, wheels, passenger):
+		self.wheels = wheels
+		self.passenger = passenger
+
+	def __str__(self):
+		return 'No of wheels : ' + str(self.wheels) + ' No of Passengers ' + str(self.passenger)
+
+	def speedlimit(self):
+		return 'my speed limit is ' + str(self.speeds(self.wheels))
+
+	@classmethod
+	def bike(cls):
+		return cls(2,2)
+
+	@classmethod
+	def car(cls):
+		return cls(4,5)
+
+	@classmethod
+	def suv(cls):
+		return cls(4,6)
+
+	@classmethod
+	def truck(cls):
+		return cls(6,2)
+
+	@staticmethod
+	def speeds(wheels):
+		if type(wheels) == int:
+			if wheels == 2:
+				return 30
+			elif wheels == 4:
+				return 60
+			elif wheels == 6:
+				return 50
+			else:
+				return 20
+		else:
+			return 20
+
+print(note:='In the above class we have created clasmethod that represent the common vehicle type')
+print(note:='and we have created a static method that returns the speedlimit based on number of wheels')
+print(note:='So rather than creating object and passing the config of number of wheels and passenger to generic vehicle')
+car = Vehicle(4,5)
+print(str(car))
+print(car.speedlimit())
+print()
+print(note:='User can directly create standard type of vehicles')
+print()
+b = Vehicle.bike()
+print(str(b))
+print(b.speedlimit())
+print()
+c = Vehicle.car()
+print(str(c))
+print(c.speedlimit())
+print()
+t = Vehicle.truck()
+print(str(t))
+print(t.speedlimit())
+print()
+
 print()
 print('-----------------------')
 print()
