@@ -39,10 +39,10 @@ print()
 
 
 print(note:='In python function are first class object, that is to say they can be passed around as variable or assigned to other variables')
-print('Type of something is ' + str(type(something)))
+print('Type of something is ' , type(something))
 
 new_something = something 
-print('Type of new_something is ' + str(type(new_something)))
+print('Type of new_something is ' , type(new_something))
 print('Both function points to the same memory address')
 print(hex(id(new_something)))
 print(hex(id(something)))

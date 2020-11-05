@@ -136,7 +136,7 @@ print(hex(id(str_a)))
 print(str_b)
 print(hex(id(str_b)))
 print( note:= 'In Python all the identifiers are interned, Python will also intern string literals that look like identifiers.')
-print(note:='but behaviour depends on the version of python as this is internal details')
+print(note:='but behavior depends on the version of python as this is internal details')
 
 
 
@@ -151,12 +151,12 @@ print( note:= 'string object cant be modified, they are allocated new memory whe
 print()
 print('-----------------------')
 print()
-print( note:= 'For example we can use upper function to convert string to upercase')
-print( note:= 'python will allocate new memory for uppper cased string, original string doesnt change')
+print( note:= 'For example we can use upper function to convert string to uppercase')
+print( note:= 'python will allocate new memory for upper cased string, original string doesn`t change')
 print( string_obj_up := string_object.upper())
 print( string_object)
-print( note:= 'new address for above string is ' + str( hex(id(string_obj_up)) ) )
-print( note:= 'which is different from ' + str(hex(id(string_object))) )
+print( note:= 'new address for above string is ' , hex(id(string_obj_up)) ) 
+print( note:= 'which is different from ' , hex(id(string_object))) 
 assert hex( id(string_obj_up) ) != hex(id(string_object))
 assert hex( id(string_object.upper()) ) != add_obj
 print()

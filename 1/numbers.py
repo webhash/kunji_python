@@ -92,8 +92,8 @@ print()
 print(note:='python also supports the boolean type')
 t = True 
 f =  False
-print('t is if type ' + str(type(t)) + ' and has address as ' + hex(id(t)))
-print('f is of type ' + str(type(f)) + ' and has address as ' + hex(id(f)))
+print('t is if type ' , type(t) , ' and has address as ' , hex(id(t)))
+print('f is of type ' , type(f) , ' and has address as ' , hex(id(f)))
 print(note:='True and false will point to a fixed memory address, when we do comparision the result would be True/false pointing to same memory address')
 print(hex(id(10>1)))
 print(hex(id(10<1)))
@@ -205,9 +205,9 @@ c2 = complex(1,2)
 
 print(c1)
 print(c2)
-print(note:='real part type ' + str(type(c1.real)) + ' imaginary part type ' + str(type(c1.imag)))
-print(note:='real part ' + str(c1.real) + ' imaginary part ' + str(c1.imag))
-print(note:='real part ' + str(c2.real) + ' imaginary part ' + str(c2.imag))
+print(note:='real part type ' , type(c1.real) ,  ' imaginary part type ' , type(c1.imag))
+print(note:='real part ' , c1.real , ' imaginary part ' , c1.imag)
+print(note:='real part ' , c2.real , ' imaginary part ' , c2.imag)
 
 print()
 print('-----------------------')

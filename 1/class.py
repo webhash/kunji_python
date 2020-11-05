@@ -7,7 +7,7 @@ print()
 
 print(note:= 'everything is basically a object in python')
 print(note:= 'this note is of type class string')
-print('Type of note is ' + str(type(note)))
+print('Type of note is ' ,type(note))
 print(note:= 'Lets have a look on how to create a class')
 
 
@@ -25,7 +25,7 @@ class Empty:
 print(note:='Although the class is empty but by default python creates a lot of scaffolding for us')
 print(note:='Look python made Empty class callable')
 e = Empty()
-print(note:= 'Like the __name__ ' + str(Empty.__name__))
+print(note:= 'Like the __name__ ' ,Empty.__name__)
 print(note:= '__name__ is an example of class attributes ')
 
 print(note:= 'we can get the internal information of class by using dir')
@@ -40,11 +40,11 @@ print(note:= 'we can add user defined class attributes as below')
 class NonEmpty:
 	version = '1.0'
 
-print(note:= 'now version is a valid class attribute ' + str(NonEmpty.version)) 
+print(note:= 'now version is a valid class attribute ' , NonEmpty.version) 
 
 print(note:= 'we can set the version attribute directly, as python doesnt have the concept of public/private')
 NonEmpty.version = '1.1'
-print(note:= 'now version is  ' + str(NonEmpty.version)) 
+print(note:= 'now version is  ' , NonEmpty.version)
 
 print()
 print('-----------------------')
@@ -104,8 +104,8 @@ print(note:= 'Lets create object of type Some_Class')
 cls1 = Some_Class(10, 'Mr.X', 'programming')
 cls2 = Some_Class(20, 'Mr.Y', 'history')
 
-print(note:='Type of cls1 is ' + str(type(cls1)))
-print(note:='Type of cls2 is ' + str(type(cls2)))
+print(note:='Type of cls1 is ' , type(cls1))
+print(note:='Type of cls2 is ' , type(cls2))
 
 assert type(cls1) == type(cls2)
 
