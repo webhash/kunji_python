@@ -3,5 +3,6 @@ kunji in hindi means -- easy way or 'key' ... this kunji for python shall take y
 
 python version 3.9 is used, and walrus operater is abused :)
 
-space vs tabs is highly polarizing topic 
-we have used tabs :)
+space vs tabs is highly polarizing topic ...
+
+we have used tabs -- dont hate the tabs
