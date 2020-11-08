@@ -40,6 +40,22 @@ print(some_list1)
 print(some_list_add1)
 assert hex(id(some_list2)) != some_list_add1
 
+print(note:='python supports a cool feature called list comprehensions, which can be used to create list one run time based on other iterables')
+
+list_comp = [i*2 for i in some_list1]
+
+print(list_comp)
+
+list_comp = [i**2 for i in (1,2,3,4,5,6)]
+
+print(list_comp)
+
+print(note:='we can also use conditional inside with list comprehension')
+print(note:='we shall print only the odd values')
+
+list_comp = [i for i in list_comp if i%2 ]
+
+print(list_comp)
 
 print(note:='what all function does list supports?')
 for item in dir(some_list1):
@@ -147,6 +163,12 @@ for item in dir(some_tuple):
 	if not('__' in item):
 		print(item)
 
+
+print(note:='lets have a look at the xip function that consumes two or more iterables, and generates iterables of tuple with values from each iterable passed to it')
+
+print(list(zip([1,2,3,4],['a','b','c','d'],['yes', 'no', 'maybe'])))
+print([str(x) + y for x,y, in zip([1,2,3,4],['a','b','c','d']) ] )
+print(note:='as you noticed above zip produces number of pairs equal to the smallest length of list passed to it')
 print()
 print('-----------------------')
 print()

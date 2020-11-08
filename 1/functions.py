@@ -235,6 +235,23 @@ print()
 print('-----------------------')
 print()
 
+
+print(note:='python supports many inbuilt function which can come handy')
+print(note:='like min, max, sum, any ')
+
+print(note:='sum - returns the sum of all the values')
+print(sum([ i for i in range(0,6)]))
+print(note:='max - returns the max value')
+print(max([ i for i in range(0,6)]))
+print(note:='min - returns the min value ')
+print(min([ i for i in range(0,6)]))
+print(note:='any - returns true if at least one value is non None type ')
+print(any([ i for i in range(0,6)]))
+
+print()
+print('-----------------------')
+print()
+
 print(note:='lets have another look at the lambdas we touched earlier')
 
 f =  lambda x,y : x**y 
@@ -255,6 +272,31 @@ def use_lambda(x,lm):
 	print(lm(x))
 
 use_lambda(2,f)
+
+
+print(note:='higher order function is a function that takes function as argument and can return function as a result')
+print(note:='map and filter  are example of such functions')
+
+print()
+print('-----------------------')
+print()
+print(note:='map can be used to apply a function to iterables')
+print(note:='map returns iterables, with function applied to each input in the iterable passed to it')
+print(list(map(f, [2,4,8])))
+print(note:='our lambda function can take two arguments, and map also can take multiple iterables')
+print(list(map(f, [2,3,4], [2,3,4])))
+print(note:='if number of elements are not same in the two iterables passed, we shall get limited results')
+l = list(map(f, [1,2,3,4,5,6], [2,3]))
+print(l)
+l = list(map(f, [0,1,2,3,4,5], [1,2,3,1,2,3]))
+print()
+print('-----------------------')
+print()
+
+odd = lambda x : x%2
+print(note:='filter is used to filter iterables based on truthfulness or function passed to it')
+print(list(filter(odd, l)))
+print(list(filter(None, l)))
 
 
 
