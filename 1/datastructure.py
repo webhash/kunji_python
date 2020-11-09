@@ -277,9 +277,9 @@ s2 = {'right', 'wrong'}
 
 S = {*s1 , *s2}
 print(S)
-print(note:='but as sets are not ordered data structure, dont expect any order in result')
+print(note:='but as sets are not ordered data structure, do not expect any order in result')
 
-print(note:='remeber that when we unpack a dict only the keys are returned')
+print(note:='remember that when we unpack a dict only the keys are returned')
 d1 = {'yes':1, 'no':0, 'maybe':2}
 d2 = {'right':-1, 'wrong':-2}
 print()
