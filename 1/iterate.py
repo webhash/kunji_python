@@ -244,3 +244,29 @@ for i in fp:
 print()
 print('-----------------------')
 print()
+
+print(note:='lets quicly look at iter() function')
+print(note:='iter supports two constructer , iter(object-> where object supports its own iterable)')
+print(note:='and iter(callable, sentinel) where callable is called until the sentinel value is not hit')
+
+def pow2():
+	i = 1
+	def inside():
+		nonlocal i
+		ret = 2**i
+		i+=1
+		return ret 
+	return inside
+
+print(note:='here basically the python is creating an iterator for us')
+iterate_pow = iter(pow2(), 1024)
+
+print(note:='below shall print the result till 1024 not hit')
+for v in iterate_pow:
+	print(v)
+
+print(note:='if you put sentinel value as 1025, you shall have an infinte loop as 1025 is not power of two')
+
+print()
+print('-----------------------')
+print()
