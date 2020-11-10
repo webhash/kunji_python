@@ -19,6 +19,11 @@ y = 1000**100
 print(type(y))
 print(sys.getsizeof(y))
 
+print(note:='python also supports the _  in numbers to make them more readable')
+print(note:='1000000000 can be hard to read, but  1000_000_000 is easy as it comes')
+z = 1000_000_000 
+print(z)
+
 print()
 print('-----------------------')
 print()
@@ -75,8 +80,9 @@ print(bin(100))
 print(note:='oct starts with 0o / 0O')
 print(oct(100))
 print(note:='we can use the 0x, 0b, 0o to specify the number of particular base')
+print(note:='underscores are supported, just dont use them at the start of the number')
 h = '0xFF'
-b = '0b1111'
+b = '0b_11_11'
 o = '0o76'
 print(h, end=' == ')
 print(int(h,16))
@@ -139,7 +145,7 @@ print(float(1))
 print(float('1'))
 print(float(1.7))
 print(float('1.7'))
-
+print(float(1_000.7))
 
 print()
 print('-----------------------')
