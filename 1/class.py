@@ -40,11 +40,14 @@ print(note:= 'we can add user defined class attributes as below')
 class NonEmpty:
 	version = '1.0'
 
+
 print(note:= 'now version is a valid class attribute ' , NonEmpty.version) 
 
-print(note:= 'we can set the version attribute directly, as python doesnt have the concept of public/private')
+print(note:= 'we can set the version attribute directly, as python doesnt have direct keyword support for the private/protected/public')
 NonEmpty.version = '1.1'
 print(note:= 'now version is  ' , NonEmpty.version)
+
+
 
 print()
 print('-----------------------')
@@ -147,7 +150,7 @@ print()
 
 
 print()
-print(note:='As mentioned before In python we don`t have the concept of private/public directly')
+print(note:='As mentioned before In python we don`t have the direct keywords of private/public ')
 print(note:='This means we can change the properties directly')
 cls1.student = 100
 cls2.student = 200
@@ -155,6 +158,46 @@ cls1.print_class_info()
 print()
 cls2.print_class_info()
 print()
+print('-----------------------')
+print()
+
+print(note:='python has another approach for providing the protection or private behaviour')
+
+class Better_Some_Class:
+	def __init__(self, version, author, publisher):
+		self.version = version
+		self._author = author
+		self.__publish = publisher
+
+	def print_class_info(self):
+		print(self.version)
+		print(self._author)
+		print(self.__publish)
+
+b = Better_Some_Class('1.0', 'web', 'git')
+
+b.print_class_info()
+
+print(b.version)
+print(b._author)
+try :
+	print(b.__publish)
+except AttributeError:
+	print(note:='we shall get attribute error if we try to access the private variable')
+
+
+print(note:="we can direclty set the version")
+b.version = '1.1'
+
+print(note:='we can directly set the protected variable')
+b._author= 'webhash'
+
+print(note:='if we do dir of the object we shall see __publish as _Better_Some_Class__publish variable')
+print(dir(b))
+print(note:='so technically we can change the variable if we want to, but his should not be done')
+b._Better_Some_Class__publish = 'github'
+print(note:='now the we have the updated values of "private" variable too')
+b.print_class_info()
 
 print()
 print('-----------------------')
