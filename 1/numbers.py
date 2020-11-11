@@ -106,6 +106,11 @@ print(hex(id(10<1)))
 assert hex(id(t)) == hex(id(10>1))
 assert hex(id(f)) == hex(id(10<1))
 
+print()
+print('-----------------------')
+print()
+
+
 print(note:='python has the function issubclass to check if one class is a subclass of another')
 
 if issubclass(bool, int):
@@ -119,6 +124,11 @@ print(note:='bool of non zero value returns True, and zero value returns False')
 print(bool(1), bool(-1), bool(0.5), bool(None), bool(0))
 print(note:='but the above behavior happens because int, float have __bool__ implemented')
 print((1).__bool__(), (-1).__bool__(), (0.5).__bool__())
+
+print()
+print('-----------------------')
+print()
+
 
 try:
 	print(('0').__bool__())

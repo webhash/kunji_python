@@ -57,6 +57,10 @@ list_comp = [i for i in list_comp if i%2 ]
 
 print(list_comp)
 
+print()
+print('-----------------------')
+print()
+
 print(note:='what all function does list supports?')
 for item in dir(some_list1):
 	if not('__' in item):
@@ -90,7 +94,10 @@ print(some_dict1)
 print(hex(id(some_dict1)))
 assert some_dict_add1 == hex(id(some_dict1))
 
-print(note:='collections have ordered dict which ensures the ordering')
+print()
+print('-----------------------')
+print()
+
 print(note:='what all function does dict supports?')
 for item in dir(some_dict1):
 	if not('__' in item):
@@ -114,6 +121,10 @@ print(some_set2)
 print(type(some_set2))
 assert type(some_set2) == type(some_set1)
 print(note:='set is not ordered , i.e. we can not be sure that when we print the value they are printed in the same order as we added them')
+
+print()
+print('-----------------------')
+print()
 
 print(note:='what all function does set supports?')
 for item in dir(some_set1):
@@ -158,13 +169,22 @@ print(note:=' and as mentioned before we can remove the brackets too')
 test_tuple = 1,
 print(type(test_tuple))
 assert type(test_tuple) == type(some_tuple)
+
+print()
+print('-----------------------')
+print()
+
 print(note:='what all function does tuples supports?')
 for item in dir(some_tuple):
 	if not('__' in item):
 		print(item)
 
 
-print(note:='lets have a look at the xip function that consumes two or more iterables, and generates iterables of tuple with values from each iterable passed to it')
+print()
+print('-----------------------')
+print()
+
+print(note:='lets have a look at the zip function that consumes two or more iterables, and generates iterables of tuple with values from each iterable passed to it')
 
 print(list(zip([1,2,3,4],['a','b','c','d'],['yes', 'no', 'maybe'])))
 print([str(x) + y for x,y, in zip([1,2,3,4],['a','b','c','d']) ] )
@@ -173,7 +193,7 @@ print()
 print('-----------------------')
 print()
 
-print(note:='list, dict, set, tuple, str are all iteratable in python')
+print(note:='list, dict, set, tuple, str are all iterable in python')
 print(note:='thus  we can use the generic for loop on them')
 
 print(note:='some_tuple')
@@ -195,6 +215,12 @@ print(note:='some_set2')
 for item in some_set2:
 	print(item)
 
+
+print()
+print('-----------------------')
+print()
+
+
 print()
 print(note:='and we can also use the unpacking behavior')
 
@@ -213,6 +239,12 @@ print(d,i,c,t)
 print(note:='but we have to ensure that we have same number of variables as the number of item(or length) in iteratable')
 print(note:='or else we shall get ValueError ')
 print(note:='but many times we do not know the length before hand')
+
+print()
+print('-----------------------')
+print()
+
+
 print(note:='we can use the * to let python do the magic i.e creating a list of all the remainder of values and assign it to starred variable')
 print(note:='name of this magic is unpacking')
 

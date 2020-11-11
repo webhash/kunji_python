@@ -30,6 +30,10 @@ else:
 	print(note:='two is smaller or equal to one')
 
 
+print()
+print('-----------------------')
+print()
+
 print(note:='we can also nest the if-else conditional')
 
 if two> one:
@@ -41,6 +45,11 @@ if two> one:
 else:
 	print(note:='two is smaller or equal to one')
 	
+
+print()
+print('-----------------------')
+print()
+
 
 print(note:='we can change the above nested if else to elif conditional')
 if two <= one:

@@ -197,9 +197,14 @@ def to_upper_with_help(input):
 print(note:='Now when we shall do help on the above function we shall see the information')
 print()
 help(to_upper_with_help)
+
 print()
+print('-----------------------')
+print()
+
+
 print(note:='How does the help picks this information???')
-print(note:='lets do dif on the function and see if we can get some hint')
+print(note:='lets do dir on the function and see if we can get some hint')
 print()
 print(dir(to_upper_with_help))
 print()
@@ -209,6 +214,9 @@ print()
 print(note:='did you notice the __annotations__ attribute in dir result? currently its empty')
 print(to_upper_with_help.__annotations__)
 print()
+print('-----------------------')
+print()
+
 print(note:='lets create another function that supports annotation')
 def to_upper_with_annotation(input:'annotation for input, we expect a string as input')->'annotation for return value, we dont return anything from this function':
 	# this is a docstring that shall be consumed by help function
@@ -266,6 +274,12 @@ print(f(2))
 assert f(2) == 4 
 
 print(note:='as we mentioned before function are first class object, we can pass them as variable')
+
+print()
+print('-----------------------')
+print()
+
+
 print(note:='check the below function, here we pass two variable, first one is used as an argument to the lambda function passed to it as second parameter')
 
 def use_lambda(x,lm):

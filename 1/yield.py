@@ -30,6 +30,10 @@ try:
 except StopIteration:
 	print(note:='as we have no more values to yield we shall get the StopIteration error')
 
+print()
+print('-----------------------')
+print()
+
 
 print(note:='we can also use the for loop')
 
@@ -49,6 +53,10 @@ for value in pow2_gen():
 	else:
 		break;
 
+print()
+print('-----------------------')
+print()
+
 
 print(note:='Lets create Fibonacci series with generators')
 
@@ -64,3 +72,8 @@ def fibonacci(n):
 		yield f1
 
 print([n for n in fibonacci(50)])
+
+
+print()
+print('-----------------------')
+print()

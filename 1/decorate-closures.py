@@ -201,6 +201,10 @@ print(b())
 print(a())
 print(b())
 
+print()
+print('-----------------------')
+print()
+
 
 print(note:="lets make a more complex scenario with closures")
 

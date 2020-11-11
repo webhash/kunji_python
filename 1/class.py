@@ -157,6 +157,7 @@ cls2.student = 200
 cls1.print_class_info()
 print()
 cls2.print_class_info()
+
 print()
 print('-----------------------')
 print()
@@ -284,9 +285,11 @@ clsstr2.print_class_info()
 print(note:='and now the eq operator will work')
 print(clsstr1 == clsstr2)
 print(note:='similarly we can add support for __lt__  and  __gt__ to have support of less than and greater than operator')
+
 print()
 print('-----------------------')
 print()
+
 print(note:='lets have a look at the classmethod, staticmethod and instancemethod')
 class NewClass:
 	def method(self):
@@ -320,6 +323,11 @@ class NewClass:
 
 print(note:='lets call the help function on the NewClass created')
 help(NewClass)
+print()
+
+
+print()
+print('-----------------------')
 print()
 
 print(note:='lets create an object of NewClass type')

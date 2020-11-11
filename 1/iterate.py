@@ -17,6 +17,10 @@ print(note:='as name suggests __next__ returns the next object , and __iter__ re
 print(note:='what if we want to create a user defined class that support the iterable feature')
 print(note:='we have to add the __next__ and __iter__ method to them')
 
+print()
+print('-----------------------')
+print()
+
 class HouseParty:
 	def __init__(self, limit):
 		self.limit = limit
