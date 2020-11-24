@@ -35,7 +35,7 @@ print(note := ('below for loop shall print one value at a time of the object '
 # we create a local variable that gets new value in each iteration
 # here we also change the end symbol to a specific value 
 for c in someobject:
-    print(c, end="<- ")
+    print(c, end=" * ")
 
 print()
 print('-----------------------')
@@ -46,23 +46,32 @@ print()
 
 i = 0
 for c in someobject:
-    print(str(i) + ' ' + c, end="<-  ")
+    print(str(i) + ' ' + c, end=" ** ")
     i = i + 1
 i = None
 print()
+
+print()
+print('-----------------------')
+print()
+
 
 print(note := 'Or we can also do following for loop')
 print()
 
 for i, c in enumerate(someobject):
-    print(str(i) + ' ' + c, end="<-  ")
+    print(str(i) + ' ' + c, end=" *** ")
 print()
 
 print()
+print('-----------------------')
+print()
+
+
 print(note := 'we can also use the while loop to get the similar result')
 i = 0
 while i < len_object:
-    print(str(i) + ' ' + someobject[i], end="<-  ")
+    print(str(i) + ' ' + someobject[i], end=" * ")
     i += 1
 i = None
 print()
