@@ -36,7 +36,7 @@ print()
 print(note := 'We can use the else clause with the loop too i.e. with for and while')
 print(note := 'else clause will only be executed if we don`t hit the break statements')
 for i in range(1, 11):
-	# not reveres the state from True to False, and vice versa
+	# not reverses the state from True to False, and vice versa
 	if not i % 12:
 		print(note := 'we will not find multiple of 12, as we used range(1,11)')
 		print(i)
