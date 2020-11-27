@@ -31,9 +31,8 @@ def some_func_2():
 
 
 some_func_2()
-print(
-    note := "In the above function, we created a local variable with the same name as the global variable, \
-    and thus we shall see the local values printed")
+print(note := "In the above function, we created a local variable with the same name as the global variable, \
+and thus we shall see the local values printed")
 
 print(note := "the value of the global variable remains unchanged")
 print(this_is_global)
@@ -66,10 +65,8 @@ print()
 
 print(note := "now the value of the global variable also changes")
 print(this_is_global)
-print(
-    note := "in the above function we also created a new global variable which was not defined before the function call")
-print(
-    note := "magic of global keyword is that it creates this new variable in global scope and can be referenced by others later, if required")
+print(note := "in the above function we also created a new global variable which was not defined before the function call")
+print(note := "magic of global keyword is that it creates this new variable in global scope and can be referenced by others later, if required")
 print(this_is_new_global)
 
 print(note := "del command can be used to delete a variable")
@@ -80,11 +77,9 @@ print('-----------------------')
 print()
 
 print(note := "we can have function defined within functions, called nested function")
-print(
-    note := "in those scenarios python search for the outer function for a variable referenced given its not available in current context")
+print(note := "in those scenarios python search for the outer function for a variable referenced given its not available in current context")
 print(note := "and will throw error if nothing is found till the main level/ global scope")
-print(
-    note := "if we assign value to the within inner function, to a variable defined in outer function then the outer value will be masked")
+print(note := "if we assign value to the within inner function, to a variable defined in outer function then the outer value will be masked")
 
 
 def function_out():
@@ -107,8 +102,7 @@ print()
 print('-----------------------')
 print()
 
-print(
-    note := "python also has the keyword nonlocal for the scenarios when we want to change the variable in outer scope")
+print(note := "python also has the keyword nonlocal for the scenarios when we want to change the variable in outer scope")
 
 
 def function_out_2():
@@ -205,8 +199,7 @@ print()
 print('-----------------------')
 print()
 
-print(
-    note := "as we can have a common variable access by multiple inner function, they will basically use the same cell")
+print(note := "as we can have a common variable access by multiple inner function, they will basically use the same cell")
 
 
 def out_1():
@@ -226,8 +219,7 @@ def out_1():
 
 
 a, b = out_1()
-print(
-    note := "we shall see the same closure information for both the inner function returned as they access the same variable")
+print(note := "we shall see the same closure information for both the inner function returned as they access the same variable")
 print(a.__closure__)
 print(a.__code__.co_freevars)
 

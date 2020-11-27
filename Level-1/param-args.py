@@ -23,8 +23,8 @@ print()
 print('-----------------------')
 print()
 
-print(note := 'but don`t worry python supports the default arguments')
-print(note := 'so if we don`t pass the arguments for default value parameters python shall use the default value')
+print(note := 'but do not worry python supports the default arguments')
+print(note := 'so if we do not pass the arguments for default value parameters python shall use the default value')
 
 
 def func2(foo, bar='life', woo='work', har='hard'):
@@ -63,9 +63,9 @@ print('-----------------------')
 print()
 
 print(note := 'many a times function consumes multiple arguments, and it could become messy to deal with each of them')
-print(note := 'but don`t worry python has solution for that ... say hello to  *')
+print(note := 'but do not worry python has solution for that ... say hello to  *')
 print(note := 'although iteratable unpacking returns a list, \in context of function it returns tuple, \
-which makes sense as python won`t want you to change the arguments passed by user')
+which makes sense as python would not want you to change the arguments passed by user')
 
 
 def sums_1(foo, bar, *args):
@@ -106,9 +106,8 @@ def sum_3(*args, flag=False):
 
 print(note := 'this function works for all the following scenarios')
 print()
-print(
-    note := 'if nothing is passed we use the default flag value, if we had not assigned the False\
-    as default value we will get TypeError')
+print(note := 'if nothing is passed we use the default flag value, if we had not assigned the False\
+as default value we will get TypeError')
 sum_3()
 print(note := 'we can pass just the flag value')
 sum_3(flag=True)

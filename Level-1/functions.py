@@ -35,8 +35,7 @@ print()
 print('-----------------------')
 print()
 
-print(
-    note := 'In python function are first class object, that is to say they can be passed around as variable or assigned to other variables')
+print(note := 'In python function are first class object, that is to say they can be passed around as variable or assigned to other variables')
 print('Type of something is ', type(something))
 
 new_something = something
@@ -99,8 +98,7 @@ def peep_func():
 
 
 print(peep_func.__code__.co_consts)
-print(
-    note := ' as you can see above python creates the constants for variables and membership tests so that optimization can happen')
+print(note := ' as you can see above python creates the constants for variables and membership tests so that optimization can happen')
 print(note := ' python also converts the list to tuples for membership')
 
 print()
@@ -131,7 +129,7 @@ print(note := 'string after function call')
 print(some_string)
 print(hex(id(some_string)))
 print(
-    'As you can see above that mod_function had the reference to the some_string, it modified it, but new copy was created')
+'As you can see above that mod_function had the reference to the some_string, it modified it, but new copy was created')
 
 print()
 print('-----------------------')
@@ -295,8 +293,7 @@ print()
 print('-----------------------')
 print()
 
-print(
-    note := 'check the below function, here we pass two variable, first one is used as an argument to the lambda function passed to it as second parameter')
+print(note := 'check the below function, here we pass two variable, first one is used as an argument to the lambda function passed to it as second parameter')
 
 
 def use_lambda(x, lm):
