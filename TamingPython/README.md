@@ -6,6 +6,7 @@ We shall be using Jupiter notebooks
 
 And yes 
 
+
 python version 3.9 is used, and walrus operator is abused :)
 
 
